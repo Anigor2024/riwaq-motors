@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b0a" />
+  <meta name="description" content="رِواق موتورز - تجربة سعودية فاخرة لشراء السيارات الجديدة والمستعملة الموثقة." />
+  <title>رِواق موتورز | سيارات فاخرة في السعودية</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">توصيل مجاني داخل الرياض وجدة والخبر للسيارات المختارة <span>•</span> فحص 240 نقطة <span>•</span> ضمان ممتد حتى 5 سنوات</div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="رِواق موتورز">
+      <span class="brand-mark">ر</span>
+      <span class="brand-copy"><strong>رِواق</strong><small>RIWAQ MOTORS</small></span>
+    </a>
+    <nav class="nav-links" aria-label="التنقل الرئيسي">
+      <a href="#inventory">السيارات</a>
+      <a href="#finance">التمويل</a>
+      <a href="#services">الخدمات</a>
+      <a href="#sell">بع سيارتك</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="favoriteBtn" aria-label="المفضلة">♡ <span id="favoriteCount">0</span></button>
+      <button class="ghost-btn" id="loginBtn">دخول</button>
+      <button class="primary-btn small" data-open-concierge>تحدث مع المستشار</button>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-backdrop"></div>
+      <div class="hero-content container">
+        <div class="eyebrow"><span></span> اختيار استثنائي. تجربة بلا تنازلات.</div>
+        <h1>سيارتك القادمة،<br><em>تليق بطموحك.</em></h1>
+        <p>اكتشف نخبة من السيارات الجديدة والمستعملة الموثقة، مع تمويل مرن، فحص شامل، وضمان موثوق — من أول نقرة حتى باب منزلك.</p>
+        <div class="hero-actions">
+          <a href="#inventory" class="primary-btn">استكشف السيارات <span>←</span></a>
+          <button class="glass-btn" data-open-concierge><span class="play-dot">◉</span> خدمة الكونسيرج</button>
+        </div>
+        <div class="trust-strip">
+          <div><strong>+1,250</strong><span>سيارة موثقة</span></div>
+          <div><strong>4.9/5</strong><span>تقييم العملاء</span></div>
+          <div><strong>240</strong><span>نقطة فحص</span></div>
+          <div><strong>24 ساعة</strong><span>توصيل مختار</span></div>
+        </div>
+      </div>
+      <div class="hero-car-label">
+        <small>اختيار الأسبوع</small>
+        <strong>Mercedes-AMG GT 63</strong>
+        <span>ابتداءً من 699,000 ر.س</span>
+      </div>
+      <div class="scroll-cue">اسحب للاكتشاف <span>↓</span></div>
+    </section>
+
+    <section class="search-shell container" aria-label="البحث عن سيارة">
+      <div class="quick-search">
+        <div class="search-heading">
+          <div><span class="mini-label">ابحث بطريقتك</span><h2>ما السيارة التي تبحث عنها؟</h2></div>
+          <div class="segmented" id="conditionTabs">
+            <button class="active" data-condition="all">الكل</button>
+            <button data-condition="new">جديدة</button>
+            <button data-condition="used">مستعملة</button>
+          </div>
+        </div>
+        <div class="filter-grid">
+          <label><span>الماركة</span><select id="brandFilter"><option value="all">كل الماركات</option></select></label>
+          <label><span>الفئة</span><select id="typeFilter"><option value="all">كل الفئات</option><option>SUV</option><option>سيدان</option><option>كوبيه</option><option>رياضية</option></select></label>
+          <label><span>الميزانية</span><select id="budgetFilter"><option value="all">أي ميزانية</option><option value="250000">حتى 250 ألف</option><option value="500000">حتى 500 ألف</option><option value="800000">حتى 800 ألف</option></select></label>
+          <button class="primary-btn filter-cta" id="searchCars">عرض السيارات <span id="searchCount">8</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands container">
+      <p>اختيارات من أرقى العلامات العالمية</p>
+      <div class="brand-row"><span>Mercedes-Benz</span><span>BMW</span><span>PORSCHE</span><span>LEXUS</span><span>RANGE ROVER</span><span>LAND CRUISER</span></div>
+    </section>
+
+    <section class="inventory-section" id="inventory">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="mini-label">مختارة بعناية</span><h2>سيارات تستحق نظرة أقرب</h2><p>مجموعة محدّثة من السيارات الموثقة والجاهزة للمعاينة والتسليم.</p></div>
+          <div class="view-tools"><button class="text-btn" id="resetFilters">إعادة الضبط</button><span id="resultCount">8 سيارات</span></div>
+        </div>
+        <div class="chip-row" id="brandChips"></div>
+        <div class="inventory-grid" id="inventoryGrid"></div>
+        <div class="center"><button class="outline-btn" id="loadMore">عرض المزيد من السيارات</button></div>
+      </div>
+    </section>
+
+    <section class="experience-section">
+      <div class="container experience-grid">
+        <div class="experience-image">
+          <div class="floating-card"><span>RIWAQ CERTIFIED</span><strong>240</strong><small>نقطة فحص دقيقة قبل التسليم</small></div>
+        </div>
+        <div class="experience-copy">
+          <span class="mini-label">معيار رِواق</span>
+          <h2>الثقة ليست ميزة إضافية.<br>إنها أساس التجربة.</h2>
+          <p>كل سيارة تدخل رِواق تمر بمنظومة تحقق صارمة تشمل الهيكل، المحرك، الأنظمة الإلكترونية، تاريخ الصيانة، وفحص مستقل قبل الاعتماد.</p>
+          <div class="features-list">
+            <div><span>01</span><div><strong>فحص 240 نقطة</strong><p>تقييم فني شامل موثق بتقرير واضح.</p></div></div>
+            <div><span>02</span><div><strong>ضمان ممتد</strong><p>خيارات تغطية حتى 5 سنوات حسب السيارة.</p></div></div>
+            <div><span>03</span><div><strong>استرجاع خلال 7 أيام</strong><p>راحة أكبر لاتخاذ القرار بثقة.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="finance-section" id="finance">
+      <div class="container finance-grid">
+        <div class="finance-copy">
+          <span class="mini-label light">تمويل أذكى</span>
+          <h2>امتلكها بخطة<br>مصممة حولك.</h2>
+          <p>احسب قسطك المبدئي فوراً واختر مدة التمويل والدفعة الأولى. التقدير استرشادي ويخضع للموافقة الائتمانية.</p>
+          <div class="finance-perks"><span>✓ موافقة أولية سريعة</span><span>✓ شركاء تمويل متعددون</span><span>✓ بدون رسوم مخفية</span></div>
+        </div>
+        <div class="calculator-card">
+          <div class="calc-top"><span>حاسبة التمويل</span><small>تقدير فوري</small></div>
+          <label>سعر السيارة <strong id="priceValue">320,000 ر.س</strong><input id="priceRange" type="range" min="120000" max="900000" step="10000" value="320000"></label>
+          <label>الدفعة الأولى <strong id="downValue">64,000 ر.س</strong><input id="downRange" type="range" min="10" max="50" step="5" value="20"></label>
+          <div class="term-row" id="termRow"><button data-term="36">36 شهر</button><button class="active" data-term="60">60 شهر</button><button data-term="72">72 شهر</button></div>
+          <div class="monthly"><span>القسط الشهري التقريبي</span><strong id="monthlyValue">5,004 <small>ر.س / شهر</small></strong></div>
+          <button class="primary-btn full" data-open-finance>اطلب عرض تمويل</button>
+          <small class="fine-print">* الحساب تقديري بنسبة سنوية افتراضية 6.5% ولا يمثل عرضاً ائتمانياً ملزماً.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section container" id="services">
+      <div class="section-head centered"><div><span class="mini-label">كل ما تحتاجه</span><h2>خدمات تكمل رحلتك</h2><p>من لحظة الاختيار وحتى ما بعد الاستلام.</p></div></div>
+      <div class="service-grid">
+        <article><div class="service-icon">◇</div><h3>تجربة قيادة منزلية</h3><p>اختر السيارة والموعد، ونوصلها إليك لتجربتها في المكان المناسب لك.</p><button data-open-drive>احجز الآن ←</button></article>
+        <article><div class="service-icon">↺</div><h3>استبدال سيارتك</h3><p>تقييم رقمي أولي ثم فحص سريع وعرض شراء واضح بدون مساومات مرهقة.</p><button data-open-sell>قيّم سيارتك ←</button></article>
+        <article><div class="service-icon">▣</div><h3>توصيل حتى الباب</h3><p>استلام راقٍ ومجهز داخل المدن الرئيسية مع شرح كامل للسيارة والخدمات.</p><button data-open-concierge>اعرف التفاصيل ←</button></article>
+        <article><div class="service-icon">♢</div><h3>رِواق كونسيرج</h3><p>مستشار شخصي يبحث معك عن السيارة الأنسب حتى لو لم تكن معروضة حالياً.</p><button data-open-concierge>ابدأ الطلب ←</button></article>
+      </div>
+    </section>
+
+    <section class="sell-section" id="sell">
+      <div class="container sell-grid">
+        <div><span class="mini-label light">بيع أسهل</span><h2>سيارتك الحالية قد تكون<br>دفعتك الأولى.</h2><p>أرسل بيانات السيارة واحصل على تقييم أولي سريع، ثم اختر البيع المباشر أو الاستبدال بسيارة من رِواق.</p><button class="white-btn" data-open-sell>ابدأ التقييم</button></div>
+        <div class="sell-stat"><span>متوسط مدة إتمام البيع</span><strong>48<small> ساعة</small></strong><p>من الفحص وحتى تحويل المبلغ للصفقات المؤهلة.</p></div>
+      </div>
+    </section>
+
+    <section class="testimonial container">
+      <div class="quote-mark">“</div><blockquote>التجربة كانت أقرب لصالة خاصة أكثر من متجر إلكتروني. من اختيار السيارة للتمويل والتوصيل، كل خطوة كانت واضحة وراقية.</blockquote><div class="reviewer"><span class="avatar">س</span><div><strong>سلمان العتيبي</strong><small>عميل رِواق — الرياض</small></div><span class="stars">★★★★★</span></div>
+    </section>
+
+    <section class="cta-section container">
+      <div><span class="mini-label">محتار بين أكثر من خيار؟</span><h2>خلّها علينا.</h2><p>أخبر مستشار رِواق بميزانيتك واستخدامك، وسنقترح عليك أفضل الخيارات المناسبة.</p></div>
+      <button class="primary-btn" data-open-concierge>اطلب ترشيحاً شخصياً</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand"><div class="brand"><span class="brand-mark">ر</span><span class="brand-copy"><strong>رِواق</strong><small>RIWAQ MOTORS</small></span></div><p>تجربة سعودية راقية لشراء وبيع وتمويل السيارات، مبنية على الوضوح والثقة والاختيار الأفضل.</p><div class="socials"><span>𝕏</span><span>◎</span><span>in</span></div></div>
+      <div><h4>السيارات</h4><a href="#inventory">جديدة</a><a href="#inventory">مستعملة موثقة</a><a href="#inventory">سيارات فاخرة</a><a href="#inventory">وصل حديثاً</a></div>
+      <div><h4>الخدمات</h4><a href="#finance">التمويل</a><a href="#sell">بيع سيارتك</a><a href="#services">تجربة قيادة</a><a href="#services">الضمان</a></div>
+      <div><h4>رِواق</h4><a href="#">من نحن</a><a href="#">تواصل معنا</a><a href="#">الأسئلة الشائعة</a><a href="#">الشروط والخصوصية</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 رِواق موتورز. نموذج تجريبي.</span><span>المملكة العربية السعودية 🇸🇦</span></div>
+  </footer>
+
+  <div class="modal" id="carModal" aria-hidden="true"><div class="modal-card car-modal-card"><button class="modal-close" data-close>×</button><div id="carModalContent"></div></div></div>
+  <div class="modal" id="formModal" aria-hidden="true"><div class="modal-card form-modal-card"><button class="modal-close" data-close>×</button><div id="formModalContent"></div></div></div>
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
