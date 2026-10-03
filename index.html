@@ -29,6 +29,7 @@
       <a href="#inventory">السيارات</a>
       <a href="#collections">المجموعات</a>
       <a href="#experience">تجربة رِواق</a>
+      <a href="#ownership">تكلفة التملك</a>
       <a href="#finance">التمويل</a>
     </nav>
     <div class="header-actions">
@@ -157,7 +158,39 @@
       <div class="showroom-orbit"></div>
       <div class="container showroom-content">
         <div class="showroom-copy reveal"><small class="micro-label light">DIGITAL SHOWROOM</small><h2>اقترب أكثر<br>قبل أن تقرر.</h2><p>استكشف السيارة من منظور أقرب، قارن التفاصيل، احفظها للمفضلة أو أضفها للمقارنة بضغطة واحدة.</p><button class="white-btn magnetic" data-details="5">ادخل صالة العرض الرقمية</button></div>
-        <div class="showroom-car reveal delay-2 tilt-card"><img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1500&q=90" alt="سيارة فاخرة في صالة عرض رقمية"><span class="hotspot h1"><i>+</i><b>محرك V8</b></span><span class="hotspot h2"><i>+</i><b>مقصورة تنفيذية</b></span><span class="hotspot h3"><i>+</i><b>تقنيات قيادة متقدمة</b></span></div>
+        <div class="showroom-car reveal delay-2 tilt-card"><img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1500&q=90" alt="سيارة فاخرة في صالة عرض رقمية"><button class="hotspot h1" data-hotspot="محرك V8 بقوة واستجابة عالية"><i>+</i><b>محرك V8</b></button><button class="hotspot h2" data-hotspot="مقصورة تنفيذية بمواد فاخرة وتجهيزات راحة متقدمة"><i>+</i><b>مقصورة تنفيذية</b></button><button class="hotspot h3" data-hotspot="أنظمة مساعدة وقيادة متقدمة"><i>+</i><b>تقنيات قيادة متقدمة</b></button></div>
+      </div>
+    </section>
+
+
+    <section class="ownership-section" id="ownership">
+      <div class="container ownership-grid">
+        <div class="ownership-copy reveal">
+          <small class="micro-label">OWNERSHIP INTELLIGENCE</small>
+          <h2>سعر الشراء ليس<br>كل القصة.</h2>
+          <p>اكتشف تكلفة التملك الشهرية بصورة أوضح: التمويل، الوقود، الصيانة، والتأمين في تقدير واحد يساعدك تقارن بعقل قبل ما تقرر بقلبك.</p>
+          <div class="ownership-highlights">
+            <span><b>01</b> تقدير شهري شامل</span>
+            <span><b>02</b> مقارنة بين السيارات</span>
+            <span><b>03</b> قابل للتعديل فورياً</span>
+          </div>
+        </div>
+        <div class="ownership-card reveal delay-1">
+          <div class="ownership-head"><div><small>التكلفة الشهرية التقديرية</small><strong id="ownershipTotal">—</strong></div><span>Riwaq Cost Lens™</span></div>
+          <label>اختر السيارة<select id="ownershipCar"></select></label>
+          <div class="ownership-sliders">
+            <label>المسافة السنوية <b id="kmValue">20,000 كم</b><input id="kmRange" type="range" min="10000" max="50000" step="5000" value="20000"></label>
+            <label>مدة الاحتفاظ <b id="yearsValue">4 سنوات</b><input id="yearsRange" type="range" min="2" max="7" step="1" value="4"></label>
+          </div>
+          <div class="cost-breakdown">
+            <div><span>القسط التقديري</span><b id="costFinance">—</b></div>
+            <div><span>وقود</span><b id="costFuel">—</b></div>
+            <div><span>صيانة</span><b id="costService">—</b></div>
+            <div><span>تأمين تقديري</span><b id="costInsurance">—</b></div>
+          </div>
+          <button class="primary-btn full magnetic" id="ownershipCompareBtn">أضف السيارة للمقارنة</button>
+          <small class="fine-print">الأرقام تقديرية لأغراض المقارنة ولا تمثل عرضاً مالياً أو تأمينياً ملزماً.</small>
+        </div>
       </div>
     </section>
 
@@ -196,6 +229,37 @@
       </div>
     </section>
 
+
+    <section class="city-experience" id="cityExperience">
+      <div class="container city-grid">
+        <div class="city-copy reveal">
+          <small class="micro-label light">RIWAQ IN YOUR CITY</small>
+          <h2>تجربة رِواق<br>توصلك أينما كنت.</h2>
+          <p>اختر مدينتك وشاهد الخدمات المتاحة فوراً من تجربة القيادة وحتى التوصيل والاستلام.</p>
+          <div class="city-tabs" id="cityTabs">
+            <button class="active" data-city="riyadh">الرياض</button>
+            <button data-city="jeddah">جدة</button>
+            <button data-city="khobar">الخبر</button>
+          </div>
+        </div>
+        <div class="city-panel reveal delay-1" id="cityPanel"></div>
+      </div>
+    </section>
+
+    <section class="faq-section container" id="faq">
+      <div class="section-title-row reveal">
+        <div><small class="micro-label">QUESTIONS, ANSWERED</small><h2>كل شيء واضح<br>قبل ما تبدأ.</h2></div>
+        <p>أهم الأسئلة التي يحتاجها العميل قبل شراء أو تمويل أو استبدال السيارة.</p>
+      </div>
+      <div class="faq-list" id="faqList">
+        <article class="faq-item reveal"><button class="faq-question"><span>هل يمكنني تجربة السيارة قبل الشراء؟</span><i>+</i></button><div class="faq-answer"><p>نعم. يمكنك طلب تجربة قيادة منزلية في المدن المؤهلة، ويقوم الفريق بتأكيد الموعد وتفاصيل السيارة معك.</p></div></article>
+        <article class="faq-item reveal"><button class="faq-question"><span>هل السيارات المستعملة مفحوصة؟</span><i>+</i></button><div class="faq-answer"><p>السيارات المعروضة كـ Riwaq Certified تمر بمراجعة وفحص متعدد النقاط قبل اعتمادها في المتجر.</p></div></article>
+        <article class="faq-item reveal"><button class="faq-question"><span>هل أستطيع استبدال سيارتي الحالية؟</span><i>+</i></button><div class="faq-answer"><p>نعم. ابدأ بتقييم أولي من قسم الاستبدال، ثم يتم ترتيب الفحص وتقديم عرض مبدئي للشراء أو الاستبدال.</p></div></article>
+        <article class="faq-item reveal"><button class="faq-question"><span>كيف يعمل التمويل داخل رِواق؟</span><i>+</i></button><div class="faq-answer"><p>يمكنك تقدير القسط مباشرة من الحاسبة ثم إرسال طلب تمويل مبدئي ليتم استكمال البيانات المطلوبة مع جهة التمويل المناسبة.</p></div></article>
+        <article class="faq-item reveal"><button class="faq-question"><span>هل يمكن طلب سيارة غير موجودة في المخزون؟</span><i>+</i></button><div class="faq-answer"><p>نعم. خدمة رِواق كونسيرج مخصصة للبحث عن سيارة بمواصفات وميزانية محددة حتى لو لم تكن معروضة حالياً.</p></div></article>
+      </div>
+    </section>
+
     <section class="sell-section" id="sell">
       <div class="sell-media parallax-media"></div><div class="sell-shade"></div>
       <div class="container sell-content reveal"><small class="micro-label light">SELL / TRADE-IN</small><h2>سيارتك الحالية<br>قد تكون بداية التالية.</h2><p>أرسل بيانات سيارتك واحصل على تقييم أولي، ثم اختر البيع المباشر أو الاستبدال.</p><button class="white-btn magnetic" data-open-sell>ابدأ التقييم الآن</button><div class="sell-stat"><strong>48</strong><span>ساعة متوسط مدة إتمام الصفقات المؤهلة</span></div></div>
@@ -211,8 +275,8 @@
     <div class="container footer-grid">
       <div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark">ر</span><span class="brand-copy"><strong>رِواق</strong><small>RIWAQ MOTORS</small></span></a><p>منصة تجريبية لتجربة شراء وبيع وتمويل السيارات الفاخرة في السعودية.</p></div>
       <div><h4>اكتشف</h4><a href="#inventory">السيارات</a><a href="#collections">المجموعات</a><a href="#finance">التمويل</a></div>
-      <div><h4>الخدمات</h4><a href="#sell">بيع سيارتك</a><a href="#experience">معيار رِواق</a><a href="#">الأسئلة الشائعة</a></div>
-      <div><h4>تواصل</h4><a href="#">الرياض</a><a href="#">جدة</a><a href="#">الخبر</a></div>
+      <div><h4>الخدمات</h4><a href="#sell">بيع سيارتك</a><a href="#experience">معيار رِواق</a><a href="#faq">الأسئلة الشائعة</a></div>
+      <div><h4>تواصل</h4><a href="#cityExperience" data-city-link="riyadh">الرياض</a><a href="#cityExperience" data-city-link="jeddah">جدة</a><a href="#cityExperience" data-city-link="khobar">الخبر</a></div>
     </div>
     <div class="container footer-bottom"><span>© 2026 RIWAQ MOTORS — Demo experience</span><span>المملكة العربية السعودية 🇸🇦</span></div>
   </footer>
