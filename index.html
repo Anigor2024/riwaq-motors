@@ -35,6 +35,7 @@
     <div class="header-actions">
       <button class="header-icon" id="favoriteBtn" aria-label="المفضلة">♡ <b id="favoriteCount">0</b></button>
       <button class="header-icon" id="compareHeaderBtn" aria-label="المقارنة">⇄ <b id="compareCount">0</b></button>
+      <button class="header-icon" id="recentBtn" aria-label="شوهد مؤخراً">◷ <b id="recentCount">0</b></button>
       <button class="primary-btn compact magnetic" data-open-concierge>مستشارك الشخصي</button>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
@@ -282,11 +283,13 @@
   </footer>
 
   <div class="compare-bar" id="compareBar"><div><span>المقارنة</span><strong id="compareNames">اختر سيارتين للمقارنة</strong></div><button class="primary-btn compact" id="openCompare">قارن الآن</button></div>
+  <div class="quick-pulse" aria-label="أدوات سريعة"><a href="#smartFinder" title="الترشيح الذكي">✦</a><button id="quickCompare" title="المقارنة">⇄</button><button data-open-concierge title="مستشار رِواق">?</button></div>
   <div class="mobile-actions"><a href="#inventory">السيارات</a><button data-open-concierge>مستشار</button><button id="mobileCompare">مقارنة <b id="mobileCompareCount">0</b></button></div>
 
   <div class="modal" id="carModal" aria-hidden="true"><div class="modal-card car-modal-card"><button class="modal-close" data-close>×</button><div id="carModalContent"></div></div></div>
   <div class="modal" id="formModal" aria-hidden="true"><div class="modal-card form-modal-card"><button class="modal-close" data-close>×</button><div id="formModalContent"></div></div></div>
   <div class="modal" id="compareModal" aria-hidden="true"><div class="modal-card compare-modal-card"><button class="modal-close" data-close>×</button><div id="compareModalContent"></div></div></div>
+  <div class="modal" id="recentModal" aria-hidden="true"><div class="modal-card compare-modal-card"><button class="modal-close" data-close>×</button><div id="recentModalContent"></div></div></div>
   <div class="toast" id="toast"></div>
 
   <script src="app.js"></script>
