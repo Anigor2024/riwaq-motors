@@ -3,173 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b0b0a" />
-  <meta name="description" content="رِواق موتورز - تجربة سعودية فاخرة لشراء السيارات الجديدة والمستعملة الموثقة." />
-  <title>رِواق موتورز | سيارات فاخرة في السعودية</title>
-  <link rel="preconnect" href="https://images.unsplash.com">
+  <meta name="theme-color" content="#0a0a09" />
+  <meta name="description" content="رِواق موتورز — تجربة سعودية فاخرة لشراء السيارات الجديدة والمستعملة الموثقة." />
+  <title>رِواق موتورز | تجربة شراء سيارات فاخرة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="announcement">توصيل مجاني داخل الرياض وجدة والخبر للسيارات المختارة <span>•</span> فحص 240 نقطة <span>•</span> ضمان ممتد حتى 5 سنوات</div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-  <header class="site-header" id="top">
+  <div class="announcement">
+    <div class="announcement-track">
+      <span>فحص 240 نقطة</span><i>•</i><span>تمويل مرن</span><i>•</i><span>تجربة قيادة منزلية</span><i>•</i><span>توصيل مختار خلال 24 ساعة</span><i>•</i><span>ضمان ممتد حتى 5 سنوات</span>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
     <a class="brand" href="#top" aria-label="رِواق موتورز">
       <span class="brand-mark">ر</span>
       <span class="brand-copy"><strong>رِواق</strong><small>RIWAQ MOTORS</small></span>
     </a>
     <nav class="nav-links" aria-label="التنقل الرئيسي">
       <a href="#inventory">السيارات</a>
+      <a href="#collections">المجموعات</a>
+      <a href="#experience">تجربة رِواق</a>
       <a href="#finance">التمويل</a>
-      <a href="#services">الخدمات</a>
-      <a href="#sell">بع سيارتك</a>
     </nav>
     <div class="header-actions">
-      <button class="icon-btn" id="favoriteBtn" aria-label="المفضلة">♡ <span id="favoriteCount">0</span></button>
-      <button class="ghost-btn" id="loginBtn">دخول</button>
-      <button class="primary-btn small" data-open-concierge>تحدث مع المستشار</button>
+      <button class="header-icon" id="favoriteBtn" aria-label="المفضلة">♡ <b id="favoriteCount">0</b></button>
+      <button class="header-icon" id="compareHeaderBtn" aria-label="المقارنة">⇄ <b id="compareCount">0</b></button>
+      <button class="primary-btn compact magnetic" data-open-concierge>مستشارك الشخصي</button>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-backdrop"></div>
-      <div class="hero-content container">
-        <div class="eyebrow"><span></span> اختيار استثنائي. تجربة بلا تنازلات.</div>
-        <h1>سيارتك القادمة،<br><em>تليق بطموحك.</em></h1>
-        <p>اكتشف نخبة من السيارات الجديدة والمستعملة الموثقة، مع تمويل مرن، فحص شامل، وضمان موثوق — من أول نقرة حتى باب منزلك.</p>
-        <div class="hero-actions">
-          <a href="#inventory" class="primary-btn">استكشف السيارات <span>←</span></a>
-          <button class="glass-btn" data-open-concierge><span class="play-dot">◉</span> خدمة الكونسيرج</button>
-        </div>
-        <div class="trust-strip">
-          <div><strong>+1,250</strong><span>سيارة موثقة</span></div>
-          <div><strong>4.9/5</strong><span>تقييم العملاء</span></div>
-          <div><strong>240</strong><span>نقطة فحص</span></div>
-          <div><strong>24 ساعة</strong><span>توصيل مختار</span></div>
-        </div>
-      </div>
-      <div class="hero-car-label">
-        <small>اختيار الأسبوع</small>
-        <strong>Mercedes-AMG GT 63</strong>
-        <span>ابتداءً من 699,000 ر.س</span>
-      </div>
-      <div class="scroll-cue">اسحب للاكتشاف <span>↓</span></div>
-    </section>
+  <main id="top">
+    <section class="hero cinematic">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2200&q=90">
+        <source src="https://videos.pexels.com/video-files/30787543/13168478_3840_2160_25fps.mp4" type="video/mp4">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="hero-noise"></div>
+      <div class="hero-gridlines"></div>
 
-    <section class="search-shell container" aria-label="البحث عن سيارة">
-      <div class="quick-search">
-        <div class="search-heading">
-          <div><span class="mini-label">ابحث بطريقتك</span><h2>ما السيارة التي تبحث عنها؟</h2></div>
-          <div class="segmented" id="conditionTabs">
-            <button class="active" data-condition="all">الكل</button>
-            <button data-condition="new">جديدة</button>
-            <button data-condition="used">مستعملة</button>
+      <div class="hero-content container">
+        <div class="hero-copy reveal">
+          <p class="hero-kicker">RIWAQ PRIVATE SELECTION</p>
+          <h1><span>ليست مجرد سيارة.</span><em>هذه هي لحظتك.</em></h1>
+          <p class="hero-lead">اختيار فريد من السيارات الفاخرة والموثقة في السعودية، مع تجربة شراء رقمية راقية تبدأ من الشاشة وتنتهي عند باب منزلك.</p>
+          <div class="hero-actions">
+            <a href="#inventory" class="primary-btn magnetic">اكتشف المجموعة <span>↙</span></a>
+            <button class="ghost-video-btn magnetic" data-open-concierge><span class="pulse-dot"></span> اطلب ترشيحاً شخصياً</button>
           </div>
         </div>
-        <div class="filter-grid">
-          <label><span>الماركة</span><select id="brandFilter"><option value="all">كل الماركات</option></select></label>
-          <label><span>الفئة</span><select id="typeFilter"><option value="all">كل الفئات</option><option>SUV</option><option>سيدان</option><option>كوبيه</option><option>رياضية</option></select></label>
-          <label><span>الميزانية</span><select id="budgetFilter"><option value="all">أي ميزانية</option><option value="250000">حتى 250 ألف</option><option value="500000">حتى 500 ألف</option><option value="800000">حتى 800 ألف</option></select></label>
-          <button class="primary-btn filter-cta" id="searchCars">عرض السيارات <span id="searchCount">8</span></button>
+
+        <div class="hero-stage-card reveal delay-2">
+          <div class="stage-top"><span>اختيار الأسبوع</span><span class="live-dot">متاح الآن</span></div>
+          <strong>Mercedes-AMG GT 63</strong>
+          <div class="stage-specs"><span>585 حصان</span><span>0–100 خلال 3.2ث</span><span>2026</span></div>
+          <div class="stage-price"><small>ابتداءً من</small><b>699,000 ر.س</b></div>
+          <button class="text-link" data-details="1">استكشف السيارة <span>←</span></button>
+        </div>
+      </div>
+
+      <div class="hero-index" aria-hidden="true"><span>01</span><div></div><span>RIWAQ</span></div>
+      <div class="scroll-hint">اكتشف التجربة <span>↓</span></div>
+    </section>
+
+    <section class="search-dock container reveal" aria-label="البحث عن سيارة">
+      <div class="search-dock-head">
+        <div><small>ابدأ من هنا</small><strong>ابحث عن سيارتك المثالية</strong></div>
+        <div class="segmented" id="conditionTabs"><button class="active" data-condition="all">الكل</button><button data-condition="new">جديدة</button><button data-condition="used">مستعملة موثقة</button></div>
+      </div>
+      <div class="search-controls">
+        <label><span>الماركة</span><select id="brandFilter"><option value="all">كل الماركات</option></select></label>
+        <label><span>الفئة</span><select id="typeFilter"><option value="all">كل الفئات</option><option>SUV</option><option>سيدان</option><option>كوبيه</option><option>رياضية</option></select></label>
+        <label><span>الميزانية</span><select id="budgetFilter"><option value="all">أي ميزانية</option><option value="350000">حتى 350 ألف</option><option value="500000">حتى 500 ألف</option><option value="700000">حتى 700 ألف</option></select></label>
+        <button class="primary-btn search-cta magnetic" id="searchCars">عرض <span id="searchCount">12</span> سيارة</button>
+      </div>
+    </section>
+
+    <section class="brand-marquee" aria-label="علامات السيارات">
+      <div class="marquee-track"><span>Mercedes-Benz</span><i>✦</i><span>BMW</span><i>✦</i><span>Porsche</span><i>✦</i><span>Lexus</span><i>✦</i><span>Range Rover</span><i>✦</i><span>Toyota</span><i>✦</i><span>Mercedes-Benz</span><i>✦</i><span>BMW</span><i>✦</i><span>Porsche</span></div>
+    </section>
+
+    <section class="collections-section" id="collections">
+      <div class="container">
+        <div class="section-title-row reveal">
+          <div><small class="micro-label">CURATED FOR SAUDI ROADS</small><h2>مجموعات صُممت حول أسلوب حياتك.</h2></div>
+          <p>بدل أن تبحث وسط مئات السيارات، اختر الشخصية التي تشبهك وسنختصر الطريق.</p>
+        </div>
+        <div class="collection-grid">
+          <article class="collection-card wide reveal tilt-card" data-type-filter="SUV" style="--bg:url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1500&q=88')">
+            <div class="collection-overlay"></div><span>01</span><div><small>DESERT & FAMILY</small><h3>هيبة الـSUV.<br>بدون تنازل عن الفخامة.</h3><button>استكشف المجموعة ←</button></div>
+          </article>
+          <article class="collection-card reveal tilt-card" data-type-filter="سيدان" style="--bg:url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=88')">
+            <div class="collection-overlay"></div><span>02</span><div><small>EXECUTIVE</small><h3>تنفيذية<br>بصمتك الخاصة.</h3><button>اكتشف السيدان ←</button></div>
+          </article>
+          <article class="collection-card reveal delay-1 tilt-card" data-type-filter="رياضية" style="--bg:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=88')">
+            <div class="collection-overlay"></div><span>03</span><div><small>PERFORMANCE</small><h3>لمن يسمع<br>صوت الطريق.</h3><button>اكتشف الأداء ←</button></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="brands container">
-      <p>اختيارات من أرقى العلامات العالمية</p>
-      <div class="brand-row"><span>Mercedes-Benz</span><span>BMW</span><span>PORSCHE</span><span>LEXUS</span><span>RANGE ROVER</span><span>LAND CRUISER</span></div>
+    <section class="smart-finder" id="smartFinder">
+      <div class="smart-finder-media parallax-media"></div>
+      <div class="smart-finder-shade"></div>
+      <div class="container smart-finder-grid">
+        <div class="smart-copy reveal">
+          <small class="micro-label light">RIWAQ MATCH™</small>
+          <h2>لا تعرف أي سيارة تناسبك؟<br><em>خلّنا نختصرها عليك.</em></h2>
+          <p>أجب عن ثلاث أسئلة فقط. محرك الترشيح سيختار لك سيارات تناسب استخدامك، ميزانيتك، وطبيعة قيادتك.</p>
+          <div class="smart-proof"><span><b>12</b> سيارة في المخزون</span><span><b>3</b> أسئلة فقط</span><span><b>&lt; 30ث</b> للنتيجة</span></div>
+        </div>
+        <div class="finder-card reveal delay-2" id="finderCard">
+          <div class="finder-progress"><span class="active"></span><span></span><span></span></div>
+          <div id="finderContent"></div>
+        </div>
+      </div>
     </section>
 
     <section class="inventory-section" id="inventory">
       <div class="container">
-        <div class="section-head">
-          <div><span class="mini-label">مختارة بعناية</span><h2>سيارات تستحق نظرة أقرب</h2><p>مجموعة محدّثة من السيارات الموثقة والجاهزة للمعاينة والتسليم.</p></div>
-          <div class="view-tools"><button class="text-btn" id="resetFilters">إعادة الضبط</button><span id="resultCount">8 سيارات</span></div>
+        <div class="section-title-row inventory-title reveal">
+          <div><small class="micro-label">THE RIWAQ GARAGE</small><h2>سيارات تستحق نظرة أقرب.</h2></div>
+          <div class="inventory-meta"><span id="resultCount">12 سيارة</span><button id="resetFilters">إعادة الضبط</button></div>
         </div>
-        <div class="chip-row" id="brandChips"></div>
+        <div class="chip-row reveal" id="brandChips"></div>
         <div class="inventory-grid" id="inventoryGrid"></div>
-        <div class="center"><button class="outline-btn" id="loadMore">عرض المزيد من السيارات</button></div>
+        <div class="inventory-footer reveal"><button class="outline-btn magnetic" id="loadMore">عرض المزيد</button><button class="text-link" data-open-concierge>لم تجد ما تبحث عنه؟ اطلب سيارة بالمواصفات ←</button></div>
       </div>
     </section>
 
-    <section class="experience-section">
-      <div class="container experience-grid">
-        <div class="experience-image">
-          <div class="floating-card"><span>RIWAQ CERTIFIED</span><strong>240</strong><small>نقطة فحص دقيقة قبل التسليم</small></div>
+    <section class="experience-story" id="experience">
+      <div class="container story-layout">
+        <div class="story-visual reveal">
+          <div class="story-frame" id="storyFrame"></div>
+          <div class="story-stamp"><strong>240</strong><span>نقطة فحص<br>قبل الاعتماد</span></div>
         </div>
-        <div class="experience-copy">
-          <span class="mini-label">معيار رِواق</span>
-          <h2>الثقة ليست ميزة إضافية.<br>إنها أساس التجربة.</h2>
-          <p>كل سيارة تدخل رِواق تمر بمنظومة تحقق صارمة تشمل الهيكل، المحرك، الأنظمة الإلكترونية، تاريخ الصيانة، وفحص مستقل قبل الاعتماد.</p>
-          <div class="features-list">
-            <div><span>01</span><div><strong>فحص 240 نقطة</strong><p>تقييم فني شامل موثق بتقرير واضح.</p></div></div>
-            <div><span>02</span><div><strong>ضمان ممتد</strong><p>خيارات تغطية حتى 5 سنوات حسب السيارة.</p></div></div>
-            <div><span>03</span><div><strong>استرجاع خلال 7 أيام</strong><p>راحة أكبر لاتخاذ القرار بثقة.</p></div></div>
-          </div>
+        <div class="story-steps">
+          <div class="story-intro reveal"><small class="micro-label">RIWAQ STANDARD</small><h2>كل سيارة لها قصة.<br>نحن نتحقق من كل فصل.</h2><p>شفافية كاملة قبل أن تتخذ قرارك — من تاريخ السيارة إلى لحظة التسليم.</p></div>
+          <article class="story-step active" data-story="0"><span>01</span><div><h3>اختيار صارم للمخزون</h3><p>لا تدخل كل سيارة إلى رِواق. نبدأ بفلترة المصدر والسجل والحالة قبل الفحص.</p></div></article>
+          <article class="story-step" data-story="1"><span>02</span><div><h3>فحص 240 نقطة موثق</h3><p>هيكل، محرك، إلكترونيات، أنظمة سلامة، ومراجعة تفصيلية من مختصين.</p></div></article>
+          <article class="story-step" data-story="2"><span>03</span><div><h3>تسليم بمستوى صالة خاصة</h3><p>تجهيز كامل، شرح للسيارة، وخيارات توصيل للمدن الرئيسية بتجربة راقية.</p></div></article>
         </div>
+      </div>
+    </section>
+
+    <section class="showroom-section">
+      <div class="showroom-orbit"></div>
+      <div class="container showroom-content">
+        <div class="showroom-copy reveal"><small class="micro-label light">DIGITAL SHOWROOM</small><h2>اقترب أكثر<br>قبل أن تقرر.</h2><p>استكشف السيارة من منظور أقرب، قارن التفاصيل، احفظها للمفضلة أو أضفها للمقارنة بضغطة واحدة.</p><button class="white-btn magnetic" data-details="5">ادخل صالة العرض الرقمية</button></div>
+        <div class="showroom-car reveal delay-2 tilt-card"><img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1500&q=90" alt="سيارة فاخرة في صالة عرض رقمية"><span class="hotspot h1"><i>+</i><b>محرك V8</b></span><span class="hotspot h2"><i>+</i><b>مقصورة تنفيذية</b></span><span class="hotspot h3"><i>+</i><b>تقنيات قيادة متقدمة</b></span></div>
       </div>
     </section>
 
     <section class="finance-section" id="finance">
       <div class="container finance-grid">
-        <div class="finance-copy">
-          <span class="mini-label light">تمويل أذكى</span>
-          <h2>امتلكها بخطة<br>مصممة حولك.</h2>
-          <p>احسب قسطك المبدئي فوراً واختر مدة التمويل والدفعة الأولى. التقدير استرشادي ويخضع للموافقة الائتمانية.</p>
-          <div class="finance-perks"><span>✓ موافقة أولية سريعة</span><span>✓ شركاء تمويل متعددون</span><span>✓ بدون رسوم مخفية</span></div>
-        </div>
-        <div class="calculator-card">
-          <div class="calc-top"><span>حاسبة التمويل</span><small>تقدير فوري</small></div>
-          <label>سعر السيارة <strong id="priceValue">320,000 ر.س</strong><input id="priceRange" type="range" min="120000" max="900000" step="10000" value="320000"></label>
-          <label>الدفعة الأولى <strong id="downValue">64,000 ر.س</strong><input id="downRange" type="range" min="10" max="50" step="5" value="20"></label>
+        <div class="finance-copy reveal"><small class="micro-label light">RIWAQ FINANCE</small><h2>امتلكها بخطة<br>مصممة حولك.</h2><p>غيّر السعر والدفعة والمدة وشاهد القسط فوراً. ثم اطلب عرضاً مبدئياً بدون تعقيد.</p><div class="finance-benefits"><span>قرار أولي سريع</span><span>شركاء تمويل متعددون</span><span>خطوات رقمية مبسطة</span></div></div>
+        <div class="calculator-card reveal delay-1">
+          <div class="calc-head"><div><small>القسط الشهري التقديري</small><strong id="monthlyValue">5,004 <i>ر.س</i></strong></div><span>تقدير فوري</span></div>
+          <label>سعر السيارة <b id="priceValue">320,000 ر.س</b><input id="priceRange" type="range" min="120000" max="900000" step="10000" value="320000"></label>
+          <label>الدفعة الأولى <b id="downValue">64,000 ر.س</b><input id="downRange" type="range" min="10" max="50" step="5" value="20"></label>
           <div class="term-row" id="termRow"><button data-term="36">36 شهر</button><button class="active" data-term="60">60 شهر</button><button data-term="72">72 شهر</button></div>
-          <div class="monthly"><span>القسط الشهري التقريبي</span><strong id="monthlyValue">5,004 <small>ر.س / شهر</small></strong></div>
-          <button class="primary-btn full" data-open-finance>اطلب عرض تمويل</button>
-          <small class="fine-print">* الحساب تقديري بنسبة سنوية افتراضية 6.5% ولا يمثل عرضاً ائتمانياً ملزماً.</small>
+          <button class="primary-btn full magnetic" data-open-finance>احصل على عرض تمويل</button>
+          <small class="fine-print">الحساب تقديري بنسبة سنوية افتراضية 6.5% ولا يمثل عرضاً ائتمانياً ملزماً.</small>
         </div>
       </div>
     </section>
 
-    <section class="services-section container" id="services">
-      <div class="section-head centered"><div><span class="mini-label">كل ما تحتاجه</span><h2>خدمات تكمل رحلتك</h2><p>من لحظة الاختيار وحتى ما بعد الاستلام.</p></div></div>
-      <div class="service-grid">
-        <article><div class="service-icon">◇</div><h3>تجربة قيادة منزلية</h3><p>اختر السيارة والموعد، ونوصلها إليك لتجربتها في المكان المناسب لك.</p><button data-open-drive>احجز الآن ←</button></article>
-        <article><div class="service-icon">↺</div><h3>استبدال سيارتك</h3><p>تقييم رقمي أولي ثم فحص سريع وعرض شراء واضح بدون مساومات مرهقة.</p><button data-open-sell>قيّم سيارتك ←</button></article>
-        <article><div class="service-icon">▣</div><h3>توصيل حتى الباب</h3><p>استلام راقٍ ومجهز داخل المدن الرئيسية مع شرح كامل للسيارة والخدمات.</p><button data-open-concierge>اعرف التفاصيل ←</button></article>
-        <article><div class="service-icon">♢</div><h3>رِواق كونسيرج</h3><p>مستشار شخصي يبحث معك عن السيارة الأنسب حتى لو لم تكن معروضة حالياً.</p><button data-open-concierge>ابدأ الطلب ←</button></article>
+    <section class="services-section container">
+      <div class="section-title-row reveal"><div><small class="micro-label">MORE THAN A SHOWROOM</small><h2>كل شيء حول السيارة،<br>في مكان واحد.</h2></div><p>خدمات صُممت لتزيل التعقيد من رحلة الشراء والبيع والتمويل.</p></div>
+      <div class="services-rail">
+        <article class="service-panel reveal"><span>01</span><h3>تجربة قيادة منزلية</h3><p>اختر الوقت والمكان، وسنرتب وصول السيارة إليك للتجربة.</p><button data-open-drive>احجز الآن ←</button></article>
+        <article class="service-panel reveal delay-1"><span>02</span><h3>استبدال سيارتك</h3><p>تقييم أولي سريع ثم فحص وعرض شراء واضح.</p><button data-open-sell>قيّم سيارتك ←</button></article>
+        <article class="service-panel reveal delay-2"><span>03</span><h3>رِواق كونسيرج</h3><p>مستشار يبحث لك حتى خارج المخزون الحالي.</p><button data-open-concierge>ابدأ الطلب ←</button></article>
+        <article class="service-panel reveal delay-3"><span>04</span><h3>توصيل وتسليم فاخر</h3><p>تجهيز كامل وتسليم يليق بتجربة الشراء.</p><button data-open-concierge>اعرف التفاصيل ←</button></article>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="review-score reveal"><strong>4.9</strong><div><span>★★★★★</span><small>متوسط تقييم تجربة رِواق</small></div></div>
+        <div class="reviews-track" id="reviewsTrack">
+          <article class="review-card reveal"><blockquote>“من أول الترشيح إلى التوصيل، كل شيء كان واضح وهادئ. لأول مرة أحس شراء السيارة أونلاين ممكن يكون أرقى من الصالة.”</blockquote><div><span class="avatar">س</span><p><strong>سلمان العتيبي</strong><small>الرياض • شراء SUV</small></p></div></article>
+          <article class="review-card reveal delay-1"><blockquote>“المقارنة والتمويل اختصروا علي وقت كبير. أكثر شيء عجبني إن كل المعلومات واضحة بدون لف ودوران.”</blockquote><div><span class="avatar">م</span><p><strong>محمد الدوسري</strong><small>الخبر • سيارة تنفيذية</small></p></div></article>
+          <article class="review-card reveal delay-2"><blockquote>“طلبت مواصفات معينة وما كانت موجودة، والكونسيرج فعلاً رجع لي بخيارات مناسبة خلال نفس اليوم.”</blockquote><div><span class="avatar">ن</span><p><strong>نورة الحربي</strong><small>جدة • طلب خاص</small></p></div></article>
+        </div>
       </div>
     </section>
 
     <section class="sell-section" id="sell">
-      <div class="container sell-grid">
-        <div><span class="mini-label light">بيع أسهل</span><h2>سيارتك الحالية قد تكون<br>دفعتك الأولى.</h2><p>أرسل بيانات السيارة واحصل على تقييم أولي سريع، ثم اختر البيع المباشر أو الاستبدال بسيارة من رِواق.</p><button class="white-btn" data-open-sell>ابدأ التقييم</button></div>
-        <div class="sell-stat"><span>متوسط مدة إتمام البيع</span><strong>48<small> ساعة</small></strong><p>من الفحص وحتى تحويل المبلغ للصفقات المؤهلة.</p></div>
-      </div>
+      <div class="sell-media parallax-media"></div><div class="sell-shade"></div>
+      <div class="container sell-content reveal"><small class="micro-label light">SELL / TRADE-IN</small><h2>سيارتك الحالية<br>قد تكون بداية التالية.</h2><p>أرسل بيانات سيارتك واحصل على تقييم أولي، ثم اختر البيع المباشر أو الاستبدال.</p><button class="white-btn magnetic" data-open-sell>ابدأ التقييم الآن</button><div class="sell-stat"><strong>48</strong><span>ساعة متوسط مدة إتمام الصفقات المؤهلة</span></div></div>
     </section>
 
-    <section class="testimonial container">
-      <div class="quote-mark">“</div><blockquote>التجربة كانت أقرب لصالة خاصة أكثر من متجر إلكتروني. من اختيار السيارة للتمويل والتوصيل، كل خطوة كانت واضحة وراقية.</blockquote><div class="reviewer"><span class="avatar">س</span><div><strong>سلمان العتيبي</strong><small>عميل رِواق — الرياض</small></div><span class="stars">★★★★★</span></div>
-    </section>
-
-    <section class="cta-section container">
-      <div><span class="mini-label">محتار بين أكثر من خيار؟</span><h2>خلّها علينا.</h2><p>أخبر مستشار رِواق بميزانيتك واستخدامك، وسنقترح عليك أفضل الخيارات المناسبة.</p></div>
-      <button class="primary-btn" data-open-concierge>اطلب ترشيحاً شخصياً</button>
+    <section class="final-cta container reveal">
+      <div><small class="micro-label">PRIVATE CLIENT SERVICE</small><h2>أخبرنا ماذا تريد.<br>واترك البحث علينا.</h2></div>
+      <div><p>ميزانية، استخدام، لون أو مواصفات دقيقة — مستشار رِواق يتولى المهمة من أول ترشيح حتى التسليم.</p><button class="primary-btn magnetic" data-open-concierge>ابدأ مع مستشار رِواق</button></div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-grid">
-      <div class="footer-brand"><div class="brand"><span class="brand-mark">ر</span><span class="brand-copy"><strong>رِواق</strong><small>RIWAQ MOTORS</small></span></div><p>تجربة سعودية راقية لشراء وبيع وتمويل السيارات، مبنية على الوضوح والثقة والاختيار الأفضل.</p><div class="socials"><span>𝕏</span><span>◎</span><span>in</span></div></div>
-      <div><h4>السيارات</h4><a href="#inventory">جديدة</a><a href="#inventory">مستعملة موثقة</a><a href="#inventory">سيارات فاخرة</a><a href="#inventory">وصل حديثاً</a></div>
-      <div><h4>الخدمات</h4><a href="#finance">التمويل</a><a href="#sell">بيع سيارتك</a><a href="#services">تجربة قيادة</a><a href="#services">الضمان</a></div>
-      <div><h4>رِواق</h4><a href="#">من نحن</a><a href="#">تواصل معنا</a><a href="#">الأسئلة الشائعة</a><a href="#">الشروط والخصوصية</a></div>
+      <div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark">ر</span><span class="brand-copy"><strong>رِواق</strong><small>RIWAQ MOTORS</small></span></a><p>منصة تجريبية لتجربة شراء وبيع وتمويل السيارات الفاخرة في السعودية.</p></div>
+      <div><h4>اكتشف</h4><a href="#inventory">السيارات</a><a href="#collections">المجموعات</a><a href="#finance">التمويل</a></div>
+      <div><h4>الخدمات</h4><a href="#sell">بيع سيارتك</a><a href="#experience">معيار رِواق</a><a href="#">الأسئلة الشائعة</a></div>
+      <div><h4>تواصل</h4><a href="#">الرياض</a><a href="#">جدة</a><a href="#">الخبر</a></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 رِواق موتورز. نموذج تجريبي.</span><span>المملكة العربية السعودية 🇸🇦</span></div>
+    <div class="container footer-bottom"><span>© 2026 RIWAQ MOTORS — Demo experience</span><span>المملكة العربية السعودية 🇸🇦</span></div>
   </footer>
+
+  <div class="compare-bar" id="compareBar"><div><span>المقارنة</span><strong id="compareNames">اختر سيارتين للمقارنة</strong></div><button class="primary-btn compact" id="openCompare">قارن الآن</button></div>
+  <div class="mobile-actions"><a href="#inventory">السيارات</a><button data-open-concierge>مستشار</button><button id="mobileCompare">مقارنة <b id="mobileCompareCount">0</b></button></div>
 
   <div class="modal" id="carModal" aria-hidden="true"><div class="modal-card car-modal-card"><button class="modal-close" data-close>×</button><div id="carModalContent"></div></div></div>
   <div class="modal" id="formModal" aria-hidden="true"><div class="modal-card form-modal-card"><button class="modal-close" data-close>×</button><div id="formModalContent"></div></div></div>
+  <div class="modal" id="compareModal" aria-hidden="true"><div class="modal-card compare-modal-card"><button class="modal-close" data-close>×</button><div id="compareModalContent"></div></div></div>
   <div class="toast" id="toast"></div>
 
   <script src="app.js"></script>
